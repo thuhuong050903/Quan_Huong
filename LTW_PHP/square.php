@@ -8,53 +8,24 @@
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
-<?php
-
-$x = 0;
-$y = 0;
-$square = '';
-$square2 = '';
-
-for ($i = 1; $i <= 2; $i++) {
-    $lop1 = '<div class="square1"></div>';
-    $lop2 = '<div class="square2"></div>';
-
-    while ($x < 5) {
-        $square .= $lop1;
-        $x += 1;
-    }
-
-    while ($y < 5) {
-        $square2 .= $lop2;
-        $y += 1;
-    }
-}
-
-
-?>
 
 
 <body id="hehe">
-<!---->
-<!--<div class="squares"> --><?php //echo $square ?><!--  </div>-->
-<!--<br>-->
-<!--<div class="squares"> --><?php //echo $square2 ?><!--  </div>-->
-<!--<br>-->
-<!--<div class="squares"> --><?php //echo $square ?><!--  </div>-->
-<!--<br>-->
-<!--<div class="squares"> --><?php //echo $square2 ?><!--  </div>-->
-
+<?php
+$x = 0;
+$lop = '';
+while ($x <= 4) {
+    for ($i = 1; $i <= 5; $i++) {
+        if ($x % 2 == 1) {
+            echo '<div class="square1"></div>';
+        } else {
+            echo '<div class="square2"></div>';
+        }
+    
+    } echo "<br>";
+    $x++;
+}
+?>
 </body>
 
-<script >
-    for (let i = 0; i < 4; i++) {
-        var a='';
-        console.log('aaa');
-        a+= '<div class="squares"> <?php echo $square ?>  </div>';
-        a+='<br>';
-        a+='<div class="squares"> <?php echo $square2 ?>  </div>'
-        a+='<br>';
-    }
-    document.getElementById('hehe').innerHTML=a;
-</script>
 </html>
